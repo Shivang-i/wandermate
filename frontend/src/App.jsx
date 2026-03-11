@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Signup from './pages/auth/Signup';
 import Login from './pages/auth/Login';
 import VerifyEmail from './pages/auth/VerifyEmail';
-
+import Verify from './pages/auth/Verify';
 const router= createBrowserRouter([
   {
   path:'/',
@@ -21,6 +21,10 @@ const router= createBrowserRouter([
    {
     path:'/verify',
     element:<VerifyEmail/>
+  },
+   {
+    path:'/verify/:token',
+    element:<Verify/>
   }
 ])
 
