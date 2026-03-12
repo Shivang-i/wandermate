@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import Home from './pages/Home';
-import Signup from './pages/auth/Signup';
+
+
 import Login from './pages/auth/Login';
 import VerifyEmail from './pages/auth/VerifyEmail';
 import Verify from './pages/auth/Verify';
@@ -9,16 +9,13 @@ import ForgotPassword from './pages/auth/ForgotPassword';
 import ChangePassword from './pages/auth/ChangePassword';
 import VerifyOTP from './pages/auth/VerifyOTP';
 import LandingPage from './pages/LandingPage';
-import Demo from './pages/Demo';
+
 const router= createBrowserRouter([
   {
   path:'/',
   element:<LandingPage/>
   },
-  {
-  path:'/signup',
-  element:<Signup/>
-  },
+  
   {
   path:'/login',
   element:<Login/>
@@ -42,11 +39,8 @@ const router= createBrowserRouter([
    {
     path:'/verify-otp/:email',
     element:<VerifyOTP/>
-  },
-  {
-    path: "/demo",
-    element: <Demo name="Shivangi" />, // passing prop
-  },
+  }
+  
   // {
   //   path: "/landing",
   //   element: <LandingPage />,
