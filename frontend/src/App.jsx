@@ -8,10 +8,12 @@ import Verify from './pages/auth/Verify';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ChangePassword from './pages/auth/ChangePassword';
 import VerifyOTP from './pages/auth/VerifyOTP';
+import LandingPage from './pages/LandingPage';
+import Demo from './pages/Demo';
 const router= createBrowserRouter([
   {
   path:'/',
-  element:<Home/>
+  element:<LandingPage/>
   },
   {
   path:'/signup',
@@ -40,7 +42,15 @@ const router= createBrowserRouter([
    {
     path:'/verify-otp/:email',
     element:<VerifyOTP/>
-  }
+  },
+  {
+    path: "/demo",
+    element: <Demo name="Shivangi" />, // passing prop
+  },
+  // {
+  //   path: "/landing",
+  //   element: <LandingPage />,
+  // }
 ])
 
 const App = () => {
@@ -51,4 +61,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
